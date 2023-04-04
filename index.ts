@@ -5,6 +5,7 @@ let shipping: number;
 let taxPercent: number;
 let taxTotal: number;
 let total: number;
+let shippingAddress: string = "42 Wallaby Way, Sidney, Australia."
 
 const product = products.filter(product => { 
   return product.name === productName;
