@@ -1,10 +1,10 @@
 import products from './products';
 
 const productName: string = 'shirt';
-let shipping()
-let taxPercent()
-let taxTotal()
-let total() 
+let shipping: number;
+let taxPercent: number;
+let taxTotal: number;
+let total: number;
 
 const product = products.filter(product => { 
   return product.name === productName;
