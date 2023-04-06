@@ -22,3 +22,10 @@ if (Number(product.price) > 25) {
   shipping = 5;
 }
 
+if (shippingAddress.match('New York')) {
+  taxPercent = 0.1;
+} else {
+  shipping = 0.05;
+}
+
+ 
