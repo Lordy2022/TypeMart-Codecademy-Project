@@ -29,3 +29,4 @@ if (shippingAddress.match('New York')) {
 }
 
 taxTotal = product.price * taxPercent;
+total = product.price + taxTotal + shipping;

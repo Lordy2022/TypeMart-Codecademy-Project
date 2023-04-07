@@ -27,3 +27,4 @@ else {
     shipping = 0.05;
 }
 taxTotal = product.price * taxPercent;
+total = product.price + taxTotal + shipping;
