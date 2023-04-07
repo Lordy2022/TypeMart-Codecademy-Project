@@ -15,7 +15,7 @@ if (product.preOrder) {
   console.log("We will send you a message when your product ships.");
 }
 
-if (Number(product.price) > 25) {
+if (product.price > 25) {
   console.log('This item will recieve free shipping');
     shipping = 0;
 } else {
@@ -28,4 +28,4 @@ if (shippingAddress.match('New York')) {
   shipping = 0.05;
 }
 
- 
+taxTotal = product.price * taxPercent;

@@ -13,10 +13,17 @@ var product = products_1.default.filter(function (product) {
 if (product.preOrder) {
     console.log("We will send you a message when your product ships.");
 }
-if (Number(product.price) > 25) {
+if (product.price > 25) {
     console.log('This item will recieve free shipping');
     shipping = 0;
 }
 else {
     shipping = 5;
 }
+if (shippingAddress.match('New York')) {
+    taxPercent = 0.1;
+}
+else {
+    shipping = 0.05;
+}
+taxTotal = product.price * taxPercent;
