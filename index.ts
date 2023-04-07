@@ -1,6 +1,6 @@
 import products from './products';
 
-const productName: string = 'fanny pack';
+const productName: string = 'tote bag';
 let shipping: number;
 let taxPercent: number;
 let taxTotal: number;
@@ -25,8 +25,17 @@ if (product.price > 25) {
 if (shippingAddress.match('New York')) {
   taxPercent = 0.1;
 } else {
-  shipping = 0.05;
+  taxPercent = 0.05;
 }
 
 taxTotal = product.price * taxPercent;
 total = product.price + taxTotal + shipping;
+
+console.log(`
+Product:  ${product.name}
+Address:  ${shippingAddress}
+Price:    $${product.price}
+Tax:      $${taxTotal.toFixed(2)}
+Shipping: $${shipping.toFixed(2)}
+Total:    $${total.toFixed(2)}
+`);

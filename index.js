@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var products_1 = require("./products");
-var productName = 'fanny pack';
+var productName = 'tote bag';
 var shipping;
 var taxPercent;
 var taxTotal;
@@ -24,7 +24,8 @@ if (shippingAddress.match('New York')) {
     taxPercent = 0.1;
 }
 else {
-    shipping = 0.05;
+    taxPercent = 0.05;
 }
 taxTotal = product.price * taxPercent;
 total = product.price + taxTotal + shipping;
+console.log("\nProduct:  ".concat(product.name, "\nAddress:  ").concat(shippingAddress, "\nPrice:    $").concat(product.price, "\nTax:      $").concat(taxTotal.toFixed(2), "\nShipping: $").concat(shipping.toFixed(2), "\nTotal:    $").concat(total.toFixed(2), "\n"));
